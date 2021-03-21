@@ -1,0 +1,19 @@
+Slack Tips
+
+Pular linha: CTRL + ENTER
+
+Negrito -> *texto* ou CTRL + B
+
+Itálico -> _texto_ ou CTRL + I
+
+Traçado -> ~texto~ ou CTRL + SHIFT + X
+
+Citação -> > texto simples ou CTRL + SHIFT + >
+		   >>> texto múltiplo  	
+
+Inline code -> `texto` (uma palavra ou linha) ou CTRL + SHIFT + C
+			   ```texto``` (bloco de texto)
+			   
+Lista -> Número: CTRL + SHIFT + 7
+		 Pontos: CTRL + SHIFT + 8
+

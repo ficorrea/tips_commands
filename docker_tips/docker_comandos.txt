@@ -1,0 +1,71 @@
+Comandos docker principais
+
+docker run hello-world -> possui dicas de criação do container
+
+### EXECUÇÃO E CRIAÇÃO ###
+docker run -ti --name <NOME> <CONTAINER> -> cria e executa um container em modo interativo
+docker run -ti --name <NOME> <CONTAINER> /bin/bash  -> executa o comando bash 
+docker create <CONTAINER> -> cria o container sem executá-lo
+docker start/stop/pause/unpause <CONTAINER ID> -> inicia, para, pausa e restarta um container
+docker attach <CONTAINER ID> -> reacessa o container
+
+### CONSUMO ###
+docker stats <CONTAINER ID> -> informa a quantidade de recursos utilizados pelo container 
+docker top <CONTAINER ID> -> informa processos do container
+docker logs <CONTAINER ID> -> informa logs do container
+
+### REMOÇÃO ###
+docker rm <CONTAINER ID> -> remove container parado
+docker rm -f <CONTAINER ID> -> remove container em execução
+
+### SAIR DO CONTAINER SEM FINALIZÁ-LO ###
+CONTROL + P + Q (Linux)
+
+### IMAGENS ###
+docker images -> exibe todas as imagens contidas na máquina
+docker images -a
+
+### REMOVER IMAGES ###
+docker images rmi <IMAGE ID>
+docker images rmi <IMAGE ID> <IMAGE ID> <IMAGE ID>... 
+
+### STATUS ###
+docker ps -> lista os containeres em execução
+docker ps -a -> lista todos os containeres parados/finalizados
+
+### VISUALIZAR CONFIGURAÇÕES ###
+docker inspect <CONTAINER ID> -> verifica as configurações do container
+docker inspect <CONTAINER ID> | grep <OPÇÃO> -> especifica a informação que deseja ser verificada (com grep não funfou no Windows)
+docker inspect <CONTAINER1> <CONTAINER2> ... | grep <OPÇÃO> -> funciona com vários containeres ao mesmo tempo
+
+### SETAR CONFIGURAÇÔES ###
+docker run -ti --memory <VALOR>m --name <NOME> <CONTAINER> -> configura o valor de memória
+docker update -m 256m <CONTAINER ID>/<NOME> -> seta a configuração de um container já criado e em execução
+docker run -ti --cpu-shares <VALOR> --name <NOME> <CONTAINER> -> seta o uso de CPU
+docker update --cpu-shares <VALOR> <CONTAINER ID>/<NOME> -> seta o uso de CPU em container em execução
+
+### MONTAR VOLUME (Compartilhamento) ###
+docker un -ti -v </nome> ubuntu /bin/bash
+df -h -> verifica os volumes
+docker inspect <CONTAINER>
+docker inspect -f {{.Mounts}} <CONTAINER_ID> -> verificar onde o volume está montado
+
+### DOCKERFILE ###
+Cria uma lista de instruções para build de um container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

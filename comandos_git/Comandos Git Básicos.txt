@@ -1,0 +1,55 @@
+git --config helper cache
+git config credential.helper cache -> gravar os dados para envio no push
+
+
+git init -> criar um repositório Git
+
+git status -> verifica a situação dos arquivos no repositório
+
+git add -> inclui os arquivos para serem rastreados
+git add . / git add *.extensão / git add .txt
+
+.gitignore -> arquivo que se cria onde podemos ignorar pastas ou outros arquivos para track
+https://github.com/github/gitignore (Projeto com exemplos de arquivos)
+
+git commit -m -> para gravar arquivos no repositório
+git commit -a -m | -am -> verifica as alterações e insere na área de stage
+ 
+git log -> exibe o histórico
+
+git diff -> verifica as mudanças entre um arquivo alterado e o comitado anteriormente
+
+git rm -> remove arquivo do repositório
+
+git remote add origin https://github.com/fulanodasilva/diretorio.git -> aponta o repositório máquina para o Github
+
+git push origin master -> envia as mudanças para o Github
+
+git mv nome1 nome2 -> altera o nome do arquivo de nome1 para nome2
+git mv arquivo diretorio/arquivo -> alterar o diretório do arquivo em questão
+
+git checkout -- arquivo -> desfaz as alterações ainda não rastreadas (que ainda não estão na área de stage), serve para recuperar arquivos deletados tb
+
+git reset -- arquivo -> desfaz as alterações já rastreadas
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Branches -> Uma branch é uma linha independente de desenvolvimento em que podemos comitar novas versões do código sem afetar outras branches.
+
+git branch -> apresenta as branches
+
+git branch -v -> apresenta as branches com os commits associados
+
+git branch nome_da_branch -> cria uma branch
+
+git checkout nome_da_branch -> troca para a branch escolhida
+
+git checkout -b nome_da_branch -> cria e já aponta para a branch criada
+
+git branch -d noma_da_branch -> remove a branch (*Não é possível remover uma branch enquanto estivermos nela. Por isso, devemos ir para outra branch.)
+
+git branch --no-merged -> verificar as branches ainda não mescladas
+
+git merge nome_da_branch_não_mesclada -m "Mensagem" -> mescla as alterações feitas nas branches
+
+
